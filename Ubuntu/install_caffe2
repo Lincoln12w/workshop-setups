@@ -1,0 +1,76 @@
+#!/bin/bash
+#
+# Descriptor:
+# Install Caffe2 on Ubuntu 16.04.
+#   (Tested on Ubuntu 16.04 with python 2.7)
+#
+# Modify History
+# --------------
+# 00a 01apr18 lzw create
+# 00b 30apr18 lzw move cuda & cudnn install to install_cuda
+
+source install_cuda
+
+install_dependences()
+{
+    sudo apt-get update
+    sudo apt-get install -y --no-install-recommends \
+          build-essential \
+          cmake \
+          git \
+          libgoogle-glog-dev \
+          libgtest-dev \
+          libiomp-dev \
+          libleveldb-dev \
+          liblmdb-dev \
+          libopencv-dev \
+          libopenmpi-dev \
+          libsnappy-dev \
+          libprotobuf-dev \
+          openmpi-bin \
+          openmpi-doc \
+          protobuf-compiler \
+          python-dev \
+          python-pip
+
+    sudo pip install \
+          future \
+          numpy \
+          protobuf
+
+    # for Ubuntu 16.04
+    sudo apt-get install -y --no-install-recommends libgflags-dev
+}
+
+install_caffe2()
+{
+    echo "Starting install caffe2"
+    # Clone Caffe2's source code from our Github repository
+    git clone --recursive https://github.com/caffe2/caffe2.git && cd caffe2
+    git submodule update --init
+
+    # Create a directory to put Caffe2's build files in
+    mkdir -p build && cd build
+
+    # Configure Caffe2's build
+    # This looks for packages on your machine and figures out which functionality
+    # to include in the Caffe2 installation. The output of this command is very
+    # useful in debugging.
+    cmake ..
+
+    # Compile, link, and install Caffe2
+    sudo make install
+
+    # Test caffe2 installation
+    cd ~ && python -c 'from caffe2.python import core' 2>/dev/null && echo "Success" || echo "Failure"
+}
+
+set -e
+
+install_dependences
+# install_cuda 8.0
+# install_cudnn 8.0 6.0
+install_caffe2
+
+
+

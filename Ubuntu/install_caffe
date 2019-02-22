@@ -1,0 +1,82 @@
+#!/bin/bash
+#
+# Descriptor:
+# Install Caffe on Ubuntu.
+#   (Tested on Ubuntu 16.04 with python 2.7)
+#
+# Modify History
+# --------------
+# 00a 01apr18 lzw create
+# 00b 30apr18 lzw move cuda & cudnn install to install_cuda
+
+source install_cuda
+
+install_dependences()
+{
+    # install dependences
+    sudo apt-get update
+    sudo apt-get install -y --no-install-recommends \
+          libprotobuf-dev \
+          libleveldb-dev \
+          libsnappy-dev \
+          libopencv-dev \
+          libhdf5-serial-dev \
+          protobuf-compiler \
+          libboost-all-dev \
+          libgflags-dev \
+          libgoogle-glog-dev \
+          liblmdb-dev \
+          graphviz # for caffe model visualization
+
+    sudo pip install \
+          pydot \
+          ConfigParser
+
+    # install BLAS
+    sudo apt-get install -y --no-install-recommends libatlas-base-dev
+}
+
+install_caffe()
+{
+    # download caffe
+    git clone https://github.com/BVLC/caffe.git
+    cd caffe
+
+    # compile caffe
+    cp Makefile.config.example Makefile.config
+    sed -i 's#^INCLUDE_DIRS.*#&\ /usr/include/hdf5/serial#g' Makefile.config
+    sed -i 's#^LIBRARY_DIRS.*#&\ /usr/lib/x86_64-linux-gnu/hdf5/serial#g' Makefile.config
+    if [ "$cpu_only" ]; then
+        sed -i 's/^#\ CPU_ONLY/CPU_ONLY/' Makefile.config
+    fi
+    if [ "$use_cudnn" ]; then
+        sed -i 's/^#\ USE_CUDNN/USE_CUDNN/' Makefile.config
+    fi
+
+    make all -j8
+    make test
+    make runtest
+    make pycaffe
+}
+
+setup_enviroment()
+{
+    ## for caffe
+    echo "export PATH=$PATH:/caffe/build/tools" >> ~/.bashrc
+    echo "export PATH=$PATH:/caffe/build/tools" >> ~/.zshrc
+
+    # for pycaffe
+    echo "export PYTHONPATH=~/caffe/python:$PYTHONPATH" >> ~/.bashrc
+    echo "export PYTHONPATH=~/caffe/python:$PYTHONPATH" >> ~/.zshrc
+
+    # to visualization the caffe model
+    # python caffe/python/draw_net.py models/model.prototxt
+}
+
+set -e
+
+install_dependences
+# install_cuda 8.0
+# install_cudnn 8.0 6.0
+install_caffe
+setup_enviroment

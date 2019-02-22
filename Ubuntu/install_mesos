@@ -1,0 +1,106 @@
+#!/bin/bash
+#
+# Descriptor:
+# Install Mesos on Ubuntu
+#   (Tested on Ubuntu 17.10)
+#
+# Modify History
+# --------------
+# 00a 01apr18 lzw create
+
+#Install java
+install_java()
+{
+
+  if [[ ! -e "jdk-8u151-linux-x64.tar.gz" ]]; then
+    wget http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz
+    if [[ "$?" -ne 0 ]]; then
+      echo "Download java failed!"
+    fi
+  fi
+
+  tar -zxf jdk-8u152-linux-x64.tar.gz
+  if [[ "$?" -ne 0 ]]; then
+    echo "Untar jdk failed!"
+  fi
+
+  sudo mv jdk1.8.0_152/ /usr/local/java
+  if [[ "$?" -ne 0 ]]; then
+    echo "Move java failed!"
+  fi
+
+  sudo bash -c 'cat >> /etc/profile <<EOF
+  #JAVA config
+  export JAVA_HOME=/usr/local/java
+  export PATH=\$PATH:\${JAVA_HOME}/bin
+  EOF'
+}
+
+install_maven()
+{
+
+  if [[ ! -e "apache-maven-3.5.2-bin.tar.gz" ]]; then
+    wget http://mirror.bit.edu.cn/apache/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz
+    if [[ "$?" -ne 0 ]]; then
+      echo "Download maven failed!"
+    fi
+  fi
+
+  tar -zxf apache-maven-3.5.2-bin.tar.gz -C ~/apache
+  if [[ "$?" -ne 0 ]]; then
+    echo "Untar maven failed!"
+  fi
+
+  sudo bash -c 'cat >> /etc/profile <<EOF
+  #maven config
+  export MAVEN_HOME=/home/lincoln/apache/apache-maven-3.5.2
+  export PATH=\$PATH:\${MAVEN_HOME}/bin
+  EOF'
+
+  source /etc/profile
+}
+
+install_mesos()
+{
+
+  if [[ ! -e "mesos-1.4.0.tar.gz" ]]; then
+    wget http://archive.apache.org/dist/mesos/1.4.0/mesos-1.4.0.tar.gz
+    if [[ "$?" -ne 0 ]]; then
+      echo "Download mesos failed!"
+    fi
+  fi
+
+  tar -zxf mesos-1.4.0.tar.gz -C ~/apache
+  if [[ "$?" -ne 0 ]]; then
+    echo "Untar mesos failed!"
+  fi
+
+  mkdir ~/apache/mesos-1.4.0/build
+  cd ~/apache/mesos-1.4.0/build
+
+  sudo apt-get install -y \
+         build-essential \
+         python-dev \
+         python-boto \
+         libcurl4-nss-dev \
+         libsasl2-dev \
+         libsasl2-2 \
+         zlib1g-dev \
+         autoconf \
+         libtool \
+         tar \
+         wget \
+         git \
+         libsvn-dev
+
+  export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/c++/v1/support/xlocale
+
+  sudo ../configure > /dev/null
+  sudo make
+  sudo make install
+
+  #ln -s /usr/local/lib/*.so /usr/lib
+  sudo ldconfig
+}
+
+mkdir -p ~/apache

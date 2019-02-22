@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# Descriptor:
+#	Install Open utils
+#
+# Modify History
+# --------------
+# 00a 13nov17 lzw create
+
+echo "12w" | sudo -S mkdir -p /utils
+echo "12w" | sudo -S cp Open /utils
+
+cat >> ~/.bashrc <<EOF
+# open command
+export PATH=$PATH:/utils}
+EOF
+
+source ~/.bashrc

@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# Descriptor:
+#	Install pytorch
+#
+# Modify History
+# --------------
+# 00a 30apr18 lzw create
+
+source install_cuda
+
+install_dependences()
+{
+}
+
+install_pytorch()
+{
+    pip install torch torchvision
+}
+
+setup_enviroment()
+{
+}
+
+set -e
+
+install_dependences
+# install_cuda 8.0
+# install_cudnn 8.0 6.0
+install_pytorch
+setup_enviroment

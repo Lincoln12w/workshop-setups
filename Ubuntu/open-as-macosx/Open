@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# Descriptor:
+#	open files with one command 'open'
+# Current support:
+#     directory, tar.gz, .sh
+#
+# Modify History
+# --------------
+# 00a 13nov17 lzw use '/etc/gnome/defaults.list' to decide the application
+#                 rename the script to Open
+
+filename="$1"
+filetype=$(file -bp --mime-type "${filename}")
+
+# Get the default application to open the file
+application=$(grep "${filetype}" ~/.local/share/application/* 2&> /dev/null)
+if [[ -z "${application}" ]]; then
+  application=$(grep "${filetype}" /etc/gnome/defaults.list)
+fi
+application="${application#*\=}"
+
+if [[ -z "${application}" ]]; then
+  # open files with self-defined application
+  case "${filetype}" in
+    "application/gzip") execute="tar -zxvf ${filename}" ;;
+    "text/x-shellscript") execute="gedit ${filename}" ;;
+    *) 
+      echo "Default application not found for type: ${filetype}"
+      exit
+      ;;
+  esac
+else
+  # open the file with default application
+  execute=$(grep "Exec=" /usr/share/applications/"${application}")
+  execute="${execute#*Exec=}"
+  execute="${execute%%Exec=*}"
+  execute=$(echo "${execute}" | sed "s#%[uU]#${filename}#")
+fi
+
+echo "12w" | sudo -S bash -c "echo \"${execute}\" >> /utils/log"
+$(${execute})
+
