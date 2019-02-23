@@ -2,8 +2,10 @@
 
 ## Free
 
+<!-- https://dwz.cn/ -->
+
 | App | Rank | Desc |
-|:---:|:---:|:---:|
+|:----|:----:|:----:|
 | <img src="https://i.loli.net/2019/02/24/5c719c53f0378.jpg" width="40" align=center> [XCode](https://dwz.cn/8GZvGpXj) | ★★★★★ |  |
 | <img src="https://i.loli.net/2019/02/24/5c719c9bebe94.jpg" width="40" align=center> [iTerm2](http://www.iterm2.com/) | ★★★★★ |  |
 | <img src="https://i.loli.net/2019/02/24/5c71a47f5175b.jpg" width="40" align=center> [HomeBrew](http://brew.sh) | ★★★★★ | Mac下很好的包管理器，类似于apt-get和yum等 |
@@ -57,7 +59,7 @@
 ## Bought
 
 | App | Rank | Cost | Desc |
-|:---:|:---:|:---:|:---:|
+|:----|:----:|:----:|:----:|
 | <img src="https://i.loli.net/2018/06/22/5b2cf47fc16a9.jpg" width="40" align=center> [Dash](https://kapeli.com/dash) | ★★★★★ | $24.99 | 程序员宝典 |
 | <img src="https://i.loli.net/2018/06/22/5b2cf6393b775.jpg" width="40" align=center> [Papers](https://www.readcube.com/papers/) | ★★★★☆ | $49 ($79 - 40% student discount) | 管理论文，生成引用格式，内嵌搜索 |
 | <img src="https://i.loli.net/2018/06/22/5b2cf669ee563.jpg" width="40" align=center> [1Password](https://1password.com/) | ★★★★☆ | $39.99 ($64.99 Beta discount) standalone license | 密码管理软件 |
@@ -69,17 +71,16 @@
 ## Bought by ZJU
 
 | App | Rank | Desc |
-|:---:|:---:|:---:|
+|:----|:----:|:----:|
 | [Matlab 2018a](http://itc.zju.edu.cn/matlab/list.htm) | ★★★☆☆ | |
 | [MS Office 2016 for Mac VL](http://ms.zju.edu.cn/) | ★★★★☆ | |
 
 ## To Buy
 
 | App | Rank | Cost | Desc |
-|:---:|:---:|:---:|:---:|
+|:----|:----:|:----:|:----:|
 | <img src="https://i.loli.net/2018/06/22/5b2cf8d3b4ad5.jpg" width="40" align=center> [Alfred 3](https://www.alfredapp.com/) | ★★★★☆ | ￡35 | 神器 |
 | <img src="https://i.loli.net/2018/06/22/5b2cf92a9681f.jpg" width="40" align=center>[Beyond Compare](https://www.scootersoftware.com/) | ★★★★☆ | $60 | 文件比较神器 |
-
 
 [//]: # (| <img src="https://i.loli.net/2018/06/22/5b2cf8fcf13ec.jpg" width="40" align=center> [Sublime Text 3]\(https://www.sublimetext.com\) | ★★★★★ | $80 | |)
 [//]: # (| <img src="https://i.loli.net/2019/02/24/5c71a2ddc302c.jpg" width="40" align=center> [Audition CS6]\(http://www.adobe.com/products/audition.html?promoid=7WQ465YF\) | ★★★☆☆ | | |)
@@ -93,7 +94,7 @@
 [//]: # (| [iMazing]\(https://imazing.com/\) | ★★☆☆☆ | ￥269.99 * 0.7 \( 30% student discount\) |)
 [//]: # (| [iCHM]\(http://www.robinlu.com/ichm\) | ★★☆☆☆ | ￥69 |)
 [//]: # (| [Evernote]\(https://evernote.com\) | ★★★☆☆ |)
-[//]: # (| [Dr. Cleaner Pro]\(https://dwz.cn/8Z03nZ86) | ★★★☆☆ | |)
+[//]: # (| [Dr. Cleaner Pro]\(https://dwz.cn/8Z03nZ86\) | ★★★☆☆ | |)
 
 ## Plugins
 
