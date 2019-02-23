@@ -51,8 +51,13 @@ echo >> ~/.zshrc << EOF
 
 # Homebrew mirror
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+# Disable update homebrew before install softwares
+export HOMEBREW_NO_AUTO_UPDATE=true
 EOF
 sourch ~/.zshrc
+
+# Install brew-cast
+brew install caskroom/cask/brew-cask
 ```
 
 - Usage

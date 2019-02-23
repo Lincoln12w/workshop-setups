@@ -21,10 +21,11 @@ install_zsh()
     # Install oh-my-zsh
     sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+    sudo chown $(whoami) ~/.zshrc
 
     # Set zsh the default bash
     # sudo chsh -s $(which zsh)
-    sudo usermod -s $(which zsh) lincoln
+    sudo usermod -s $(which zsh) $(whoami)
 }
 
 install_python36()
@@ -40,6 +41,11 @@ install_python36()
 
     # Install pip
     sudo apt-get install -y python3-pip
+
+    cat >> ~/.zshrc << EOF
+alias pip=pip3
+EOF
+    source ~/.zshrc
 }
 
 install_filesystem_support()
@@ -73,6 +79,18 @@ install_vscode()
     # Install the `Setting Sync` extension & sync the saved extension settings
 }
 
+install_linuxbrew()
+{
+    sudo apt-get install build-essential curl file git
+    # https://linuxbrew.sh/
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+
+    # Add path
+    test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+    test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+    test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >> ~/.zshrc
+}
+
 
 install_zsh
 install_python36
@@ -99,11 +117,11 @@ sudo pip install virtualenv virtualenvwrapper
 cat >> ~/.zshrc << EOF
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-source /home/lzw/.local/bin/virtualenvwrapper.sh
+source /home/$(whoami)/.local/bin/virtualenvwrapper.sh
 EOF
 
-mkdir $HOME/.virtualenvs
-source ~./bashrc
+# mkdir $HOME/.virtualenvs
+source ~./zshrc
 
 ## create a virtual environment
 
