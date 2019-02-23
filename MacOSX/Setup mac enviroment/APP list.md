@@ -13,7 +13,7 @@
 | [Amphetamine](https://itunes.apple.com/us/app/amphetamine/id937984704?mt=12) | ★★★★☆ | 防止屏幕进入休眠 | <img src="https://i.loli.net/2018/06/22/5b2cfc2fdf6bf.jpg" width="40" align=center /> |
 | [Visual Studio Code](https://code.visualstudio.com/) | ★★★★☆ | 很好的一个代码编辑器，内嵌了terminal，很方便 | <img src="https://i.loli.net/2018/06/22/5b2cfa3aa8efe.jpg" width="40" align=center /> |
 | [TeamViewer](https://www.teamviewer.com/en/) | ★★★★☆ | Mac下好用的远程桌面工具，在ios11下也支持手机了 | <img src="https://i.loli.net/2018/06/22/5b2cfffc3f8b2.jpg" width="40" align=center /> |
-| [WeChat](https://itunes.apple.com/us/app/wechat/id414478124?mt=8) | ★★★★☆ | |<img src="https://i.loli.net/2019/02/24/5c719cc99b957.jpg" width="40" align=center> |
+| [WeChat](https://itunes.apple.com/us/app/wechat/id414478124?mt=8) | ★★★★☆ |<img src="https://i.loli.net/2019/02/24/5c719cc99b957.jpg" width="40" align=center> |
 | [Chrome](https://www.google.com/chrome/browser/desktop/index.html) | ★★★★☆ | 插件很丰富 |<img src="https://i.loli.net/2019/02/24/5c719d4186313.jpg" width="40" align=center> |
 | [搜狗输入法 for Mac](http://pinyin.sogou.com/mac/) | ★★★★☆ |
 | [EasyConnect](https://itunes.apple.com/cn/app/easyconnect/id440460214?mt=12) | ★★★★☆ | RVPN 用 |<img src="https://i.loli.net/2019/02/24/5c719d940ecd0.jpg" width="40" align=center> |
