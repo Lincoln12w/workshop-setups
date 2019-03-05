@@ -1,19 +1,21 @@
-# Python
 
-Python 3.7.1 is pre-installed in MacOSX 10.14.2. (Python2 will not supported after 1st-Jan-2020)
-To install other version of python.
-
-``` sh
-brew install python3
-```
-
-or
-
-```sh
-curl https://www.python.org/ftp/python/3.6.7/python-3.6.7-macosx10.9.pkg > python-3.6.7.pkg
-```
+# Python on Mac
 
 [TOC]
+
+(**DEPRECATION**: Python 2.7 will reach the end of its life on **January 1st, 2020**. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.)
+
+## Install Python
+
+**Python 3.7.1** is pre-installed in *MacOSX 10.14.2*. To install another version of python:
+
+``` sh
+# Install the latest version of Python3 via Homebrew
+brew install python3
+
+# or download the specific version of Python from `https://www.python.org`
+curl https://www.python.org/ftp/python/3.6.7/python-3.6.7-macosx10.9.pkg > python-3.6.7.pkg
+```
 
 ## Basic setup
 
@@ -69,11 +71,6 @@ pip search <package>                            # Search a package
 
 #### Packages
 
-numpy
-seaborn
-matplotlib
-...
-
 ### [virtualenv](https://virtualenv.pypa.io/en/stable/) & [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)
 
 __Install__:
@@ -117,6 +114,12 @@ __The `--system-site-packages` Option__
 
 If build the environment with this, then the created environment will inherit packages from `/usr/lib/python2.7/site-packages` (or where yout global site-packages directory is).
 
+numpy
+seaborn
+matplotlib
+pathlib
+...
+
 ### [Opencv](http://opencv.org)
 
 __Install__:
@@ -147,16 +150,15 @@ __Install__:
 Download & Install [qt-unified-mac-x64-2.0.5-online.dmg](https://www.qt.io).
 
 ```sh
-brew install pyqt5          # Only works for python3
+# Install directly via brew and pip. Only works for Python3
+brew install pyqt5
 pip3 install PyQt5
 
 # Test installation
 python3 -c 'import PyQt5' 2>/dev/null && echo "Success" || echo "Failure"
 ```
 
-<!-- or
-
-``` sh
+<!--
 # Download & install sip
 wget -O sip-4.19.1.tar.gz https://downloads.sourceforge.net/project/pyqt/sip/sip-4.19.1/sip-4.19.1.tar.gz?r=&ts=1525091562&use_mirror=jaist
 tar -zxvf sip-4.19.1.tar.gz
@@ -170,10 +172,7 @@ tar -zxvf Qt5_gpl-5.8.tar.gz
 cd PyQt5_gpl-5.8
 python configure.py --qmake ~/Qt/5.8/clang_64/bin/qmake --sip-incdir=/path/to/sip-4.19.1/siplib
 make & make install
-
-# Test installation
-python -c 'import PyQt5' 2>/dev/null && echo "Success" || echo "Failure"
-``` -->
+-->
 
 __P1: `Project ERROR: Could not resolve SDK Path for 'macosx'`.__
 
@@ -208,14 +207,14 @@ To solve this problem, temporary Disable the SIP:
 
 Keras is now embedded in Tensorflow, import it by `import tensorflow.contrib.keras.api.keras`, `import tensorflow.python.keras` in 1.4.0.
 
+**Note**, standalone Keras API and Tensorflow-embedded Keras API can not mixed together.
+
 __Install__:
 
 ``` sh
-# CPU version
-pip install tensorflow        # Currently only support Python 3.5 and Python 3.6 (download from https://www.python.org/downloads/release/python-367/)
-
-# GPU version
-pip install tensorflow-gpu
+# Install via pip command. Currently only support Python 3.5 and Python 3.6
+pip install tensorflow      # CPU version
+pip install tensorflow-gpu  # GPU version
 
 # Pre-build CPU version with SSEX2
 pip install https://github.com/Lincoln12w/works-on-mac/raw/master/Pre-build/tensorflow-1.3.0-cp27-cp27m-macosx_10_12_x86_64.whl
@@ -303,7 +302,7 @@ pip install --upgrade setuptools
 
 __P6: `ImportError: No module named platform` when perform `import tensorflow`.__
 
-Change work directory. Do not run python in the build directory.
+Change work directory. **Do not** run python in the build directory.
 
 ### [PyTorch](http://pytorch.org/)
 
@@ -353,8 +352,8 @@ python -c 'import mxnet' 2>/dev/null && echo "Success" || echo "Failure"
 
 ### Datasets
 
-[mnist](http://yann.lecun.com/exdb/mnist/),
-[fashion_mnist](https://github.com/zalandoresearch/fashion-mnist),
-[cifar-10](http://www.cs.toronto.edu/~kriz/cifar.html),
-[BSD300](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/),
-[BSD500](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html)
+- [mnist](http://yann.lecun.com/exdb/mnist/),
+- [fashion_mnist](https://github.com/zalandoresearch/fashion-mnist),
+- [cifar-10](http://www.cs.toronto.edu/~kriz/cifar.html),
+- [BSD300](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/),
+- [BSD500](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/resources.html)
