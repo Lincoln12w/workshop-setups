@@ -47,7 +47,86 @@ __Extension__:
 
   - `⌘ + S`: Auto build the file.
 
-## Set Latex Bibstyle
+## Latex Usage
+
+### Figure
+
+``` tex
+\begin{figure*}[!t]
+  \centering
+  \includegraphics[width=\textwidth]{figure.pdf}
+  \caption{
+    This is a test figure.
+    }
+  \label{fig:test}
+\end{figure*}
+```
+
+### Table
+
+``` tex
+\usepackage{multicol}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{table}[!t]
+  \setlength\tabcolsep{1.5pt}
+  \renewcommand{\arraystretch}{2}
+  \caption{Examples}
+  \centering
+  \begin{tabular}{c c}
+    \toprule[1.5pt]
+    A &  B \\
+    \midrule[1pt]
+    a & b \\
+    $\alpha$ & $\beta$ \\
+    \bottomrule[1.5pt]
+  \end{tabular}
+  \label{table:test}
+  \\[2pt]
+  \raggedright
+     Note: balabala
+\end{table}
+
+\begin{table*}[!t]
+  \renewcommand{\arraystretch}{1.2}
+  \caption{Test2}
+  \centering
+  \begin{tabular}{c c c c c c c c c c}
+    \toprule[1.5pt]
+    \multirow{2}{*}{A}              &  \multicolumn{4}{c}{BCDE}        \\
+                                    & B & C & D & E \\
+    \midrule[1pt]
+    a                               & b & c & d & e \\
+    $\alpha$                        & $\beta$ & $\gamma$ & $\delta$ & $\sigma$ \\
+    \bottomrule[1.5pt]
+  \end{tabular}
+  \label{table:test2}
+\end{table*}
+
+\end{document}
+```
+
+## Equation
+
+``` tex
+\begin{equation}
+  \begin{split}
+    A &= B\exp(C + D + E  \\
+      &\mathrel{\phantom{====}} + c + d + e) \\
+      &= B\exp(C + D + E) * B\exp(c + d + e),
+  \end{split}
+\end{equation}
+```
+
+### Ciation format
+
+- Change [1], [2], [3] to [1]-[3]
+
+  ``` tex
+  \usepackage{cite}
+  ```
 
 - Set maximum number of author names.
 

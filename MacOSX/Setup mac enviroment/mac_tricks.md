@@ -1,11 +1,13 @@
 
-#
+# Mac tricks
+
+[TOC]
 
 ## Keyboard tricks
 
 Some Special key on mac:
 
-⌘（command）、⌥（option）、⇧（shift）、⇪（capslock）、⌃（control）、↩（return）
+⌘(command) | ⌥(option) | ⇧(shift) | ⇪(capslock) | ⌃(control) | ↩(return) | ⇥(tab)
 
 ### Paste text without format
 
@@ -53,7 +55,7 @@ Location of system icons: `/System/Library/CoreServices/CoreTypes.bundle/Content
 
 ### Some system setting (commandline)
 
--  Show all hidden files
+- Show all hidden files
 
     ``` sh
     defaults write com.apple.Finder AppleShowAllFiles -BOOL TRUE; killall Finder

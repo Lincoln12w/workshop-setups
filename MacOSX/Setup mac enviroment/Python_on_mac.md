@@ -114,6 +114,26 @@ __The `--system-site-packages` Option__
 
 If build the environment with this, then the created environment will inherit packages from `/usr/lib/python2.7/site-packages` (or where yout global site-packages directory is).
 
+### Matplotlb
+
+#### Use 'Times New Romman' Font
+
+``` py
+# From the doc: https://matplotlib.org/users/customizing.html
+#   When text.usetex is False, font.family may also be one or more concrete font names.
+#
+plt.rc('text', usetex=True)
+plt.rc('text.latex', preamble=[r'\usepackage{times}'])
+plt.rcParams['font.family'] = 'serif'
+plt.rcParams['font.serif'] = ['Times New Roman'] + plt.rcParams['font.serif']
+
+# From the doc: https://matplotlib.org/api/font_manager_api.html
+#   Real font names are not supported when text.usetex is True.
+for item in axis.get_xticklabels() + axis.get_yticklabels():
+    # item.set_fontsize(12)
+    item.set_fontname('serif')
+```
+
 numpy
 seaborn
 matplotlib

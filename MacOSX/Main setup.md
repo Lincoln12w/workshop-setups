@@ -2,9 +2,7 @@
 
 [TOC]
 
-## Some Special key on mac
-
-⌘（command）、⌥（option）、⇧（shift）、⇪（capslock）、⌃（control）、↩（return）
+Some Special key on mac: ⌘(command) | ⌥(option) | ⇧(shift) | ⇪(capslock) | ⌃(control) | ↩(return) | ⇥(tab)
 
 ## [Go2Shell](http://zipzapmac.com/Go2Shell)
 [//]: # (https://itunes.apple.com/us/app/go2shell/id445770608?mt=12)
