@@ -42,6 +42,10 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 timeout = 60
 EOF
 
+# configure with command
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+pip config set global.timeout 60
+
 # Setup alias
 cat >> ~/.zshrc << EOF
 

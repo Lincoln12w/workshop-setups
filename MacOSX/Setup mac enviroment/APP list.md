@@ -35,7 +35,7 @@
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c71a21d7797d.jpg" width="40" align=center> [Skim](http://skim-app.sourceforge.net/) | 轻量级的pdf阅读工具 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c719e34a7c0b.jpg" width="40" align=center> [xnip](https://zh.xnipapp.com/) | 比较好用的截屏软件 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c719e16eafae.jpg" width="40" align=center> [Snappy](http://snappy-app.com/) | 比较好用的截屏软件 |
-| ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c72afbe8fc7f.jpg" width="40" align=center> [Usage](https://www.mediaatelier.com/Usage/) | 统计应用时间 |
+| ★★★☆☆ | <img src="https://apps.apple.com/us/app/snappyapp/id512617038?ls=1&mt=12" width="40" align=center> [Usage](https://www.mediaatelier.com/Usage/) | 统计应用时间 |
 | ★★★☆☆ | <img src="https://i.loli.net/2018/06/22/5b2cfbe54a6a9.jpg" width="40" align=center> [CheatSheet](https://dwz.cn/6elmFCzA) | 快捷键提示 |
 | ★★★☆☆ | <img src="https://i.loli.net/2018/06/22/5b2cff795bb45.jpg" width="40" align=center> [Sluggard](https://dwz.cn/08Npudte) | 久坐提醒 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c719eabbfa65.jpg" width="40" align=center> [Just Focus](https://dwz.cn/QjcKCBp0) | 番茄时钟 |
@@ -125,6 +125,7 @@ https://bbs.feng.com/tencentdownload.php?aid=12923546&key=1d6f53cfa2586e7f3be1f8
 - Visual Studio Code
 
   - <img src="https://i.loli.net/2019/02/24/5c71a799894c6.jpg" width="40" align=center> [Setting Sync](https://github.com/shanalikhan/code-settings-sync/)
+    Gist 0df2468584758773a36e8d44cfad8c16
   - <img src="https://i.loli.net/2019/02/24/5c71a6b51364a.jpg" width="40" align=center> [Code Blue](https://sujansundareswaran.com/code-blue/)
   - <img src="https://i.loli.net/2019/02/24/5c71a73341d17.jpg" width="40" align=center> [Bracket Pair Colorizer](https://github.com/CoenraadS/BracketPair)
   - <img src="https://i.loli.net/2019/02/24/5c71a7525b589.jpg" width="40" align=center> [filesize](https://github.com/mkxml/vscode-filesize/)
