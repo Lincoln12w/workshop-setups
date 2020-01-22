@@ -11,7 +11,7 @@
 | ★★★★★ | <img src="https://i.loli.net/2019/02/24/5c71a47f5175b.jpg" width="40" align=center> [HomeBrew](http://brew.sh) | Mac下很好的包管理器，类似于apt-get和yum等 |
 | ★★★★★ | <img src="https://i.loli.net/2019/02/24/5c72b193b43df.jpg" width="40" align=center> [搜狗输入法 for Mac](http://pinyin.sogou.com/mac/) | |
 | ★★★★★ | <img src="https://i.loli.net/2018/06/22/5b2cf84373a8c.jpg" width="40" align=center> [Windscribe](https://windscribe.com/) | 科学上网 |
-| ★★★★★ | <img src="https://i.loli.net/2018/06/22/5b2cfc71b6400.jpg" width="40" align=center> [Go2Shell](https://dwz.cn/GWso0SMQ) | 打开终端并进入当前所在的Finder目录 |
+| ★★★★★ | <img src="https://i.loli.net/2018/06/22/5b2cfc71b6400.jpg" width="40" align=center> [Go2Shell](https://zipzapmac.com/Go2Shell) | 打开终端并进入当前所在的Finder目录 |
 | ★★★★☆ | <img src="https://i.loli.net/2018/06/22/5b2cfa3aa8efe.jpg" width="40" align=center> [Code](https://code.visualstudio.com/) | 内嵌terminal的文本编辑器 |
 | ★★★★☆ | <img src="https://i.loli.net/2018/06/22/5b2cfffc3f8b2.jpg" width="40" align=center> [TeamViewer](https://dwz.cn/XDhyfeqF) | 好用的远程桌面工具 |
 | ★★★★☆ | <img src="https://i.loli.net/2019/02/24/5c719d4186313.jpg" width="40" align=center> [Chrome](https://dwz.cn/jN7JqJnI) | 浏览器 |
@@ -22,7 +22,7 @@
 | ★★★★☆ | <img src="https://i.loli.net/2018/06/22/5b2cfc2fdf6bf.jpg" width="40" align=center> [Amphetamine](https://dwz.cn/8Ia8S2Lc) | 防止屏幕进入休眠 |
 | ★★★★☆ | <img src="https://i.loli.net/2019/02/24/5c719d940ecd0.jpg" width="40" align=center> [EasyConnect](https://dwz.cn/AToj9ll4) | RVPN连校网用 |
 | ★★★★☆ | <img src="https://i.loli.net/2018/06/22/5b2cbfacc335b.jpg" width="40" align=center> [Folx](https://mac.eltima.com/download-manager.html) | |
-| ★★★★☆ | <img src="https://i.loli.net/2019/02/24/5c719e458a3fd.jpg" width="40" align=center> [Keka](http://www.kekaosx.com/en/) | 图标丑萌的压缩软件 |
+| ★★★★☆ | <img src="https://i.loli.net/2019/02/24/5c719e458a3fd.jpg" width="40" align=center> [Keka](https://www.keka.io/en/) | 图标丑萌的压缩软件 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c719dd49abda.jpg" width="40" align=center> [Detexift](https://dwz.cn/lZIp71iY) | 通过画图找出相应的latex代码 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c719dfb63f4c.jpg" width="40" align=center> [mathpix](https://mathpix.com/) | 数学公式OCR生成latex代码 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c71a1867787f.jpg" width="40" align=center> [captuocr](https://github.com/gragrance/CaptuocrToy) | OCR截图识字 |
@@ -35,7 +35,6 @@
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c71a21d7797d.jpg" width="40" align=center> [Skim](http://skim-app.sourceforge.net/) | 轻量级的pdf阅读工具 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c719e34a7c0b.jpg" width="40" align=center> [xnip](https://zh.xnipapp.com/) | 比较好用的截屏软件 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c719e16eafae.jpg" width="40" align=center> [Snappy](http://snappy-app.com/) | 比较好用的截屏软件 |
-| ★★★☆☆ | <img src="https://apps.apple.com/us/app/snappyapp/id512617038?ls=1&mt=12" width="40" align=center> [Usage](https://www.mediaatelier.com/Usage/) | 统计应用时间 |
 | ★★★☆☆ | <img src="https://i.loli.net/2018/06/22/5b2cfbe54a6a9.jpg" width="40" align=center> [CheatSheet](https://dwz.cn/6elmFCzA) | 快捷键提示 |
 | ★★★☆☆ | <img src="https://i.loli.net/2018/06/22/5b2cff795bb45.jpg" width="40" align=center> [Sluggard](https://dwz.cn/08Npudte) | 久坐提醒 |
 | ★★★☆☆ | <img src="https://i.loli.net/2019/02/24/5c719eabbfa65.jpg" width="40" align=center> [Just Focus](https://dwz.cn/QjcKCBp0) | 番茄时钟 |
@@ -45,6 +44,7 @@
 
 <!-- Doesn't work ? -->
 
+[//]: #  (| [Usage]\(https://www.mediaatelier.com/Usage/\) |)
 [//]: #  (| [Wireshark]\(https://www.wireshark.org/\) |)
 [//]: #  (| [Bilibili]\(http://bilimac.eqoe.cn/\) |)
 [//]: #  (| [fliqlo]\(http://fliqlo.com/\) | 时钟屏保 |)
@@ -93,7 +93,7 @@
 [Touch Bar Pong](https://bbs.feng.com/tencentdownload.php?aid=12999661&key=e5878f1034b7d8537739cf470df349e0)
 [Touch Bar Dino](https://bbs.feng.com/tencentdownload.php?aid=12922603&key=de18f783e3b999f605c8a6603f403f9d)
 
-https://bbs.feng.com/tencentdownload.php?aid=12923546&key=1d6f53cfa2586e7f3be1f83d1ad55b5e
+<https://bbs.feng.com/tencentdownload.php?aid=12923546&key=1d6f53cfa2586e7f3be1f83d1ad55b5e>
 
 ## Plugins
 
@@ -140,3 +140,15 @@ https://bbs.feng.com/tencentdownload.php?aid=12923546&key=1d6f53cfa2586e7f3be1f8
   - [Resize Image](http://www.packal.org/workflow/resize-image)
   - [Dash](https://www.alfredapp.com/blog/productivity/dash-quicker-api-documentation-search/)
   - [YoudaoTranslate](https://github.com/wensonsmith/YoudaoTranslate)
+
+## VMware setting (Black screen)
+
+``` shell
+tccutil reset All com.vmware.fusion
+
+sudo sqlite3 "/Library/Application Support/com.apple.TCC/TCC.db" 'insert into access values ("kTCCServiceScreenCapture", "com.vmware.fusion", 0, 1, 1, "", "", "", "UNUSED", "", 0,1565595574)'
+
+sudo sqlite3 "/Library/Application Support/com.apple.TCC/TCC.db" 'insert into access values ("kTCCServiceListenEvent", "com.vmware.fusion", 0, 1, 1, "", "", "", "UNUSED", "", 0,1565595574)'
+
+sudo sqlite3 "/Library/Application Support/com.apple.TCC/TCC.db" 'insert into access values ("kTCCServicePostEvent", "com.vmware.fusion", 0, 1, 1, "", "", "", "UNUSED", "", 0,1565595574)'
+```

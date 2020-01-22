@@ -1,4 +1,3 @@
-
 # Compile opencv
 
 ```sh

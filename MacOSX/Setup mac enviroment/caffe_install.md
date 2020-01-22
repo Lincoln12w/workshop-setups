@@ -1,8 +1,12 @@
+# Install caffe
 
+## Install CUDA
+
+Download [CUDA](https://developer.nvidia.com/cuda-downloads?target_os=MacOSX&target_arch=x86_64&target_version=1013)
+
+## General dependencies
 
 ``` shell
-# General dependencies
-
 brew install -vd snappy leveldb gflags glog szip lmdb
 # need the homebrew science source for OpenCV and hdf5
 brew tap homebrew/science
